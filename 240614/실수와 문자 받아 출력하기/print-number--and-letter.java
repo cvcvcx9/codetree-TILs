@@ -8,6 +8,6 @@ public class Main {
         double b = sc.nextDouble();
         System.out.println(c);
         System.out.printf("%.2f\n",a);
-        System.out.printf("%.2f\n",b;
+        System.out.printf("%.2f\n",b);
     }
 }
