@@ -31,20 +31,24 @@ public class Main {
             }
         }
         int happyCnt = 0;
-        for(int i = 0; i<n; i++){
-            if(isHappy(matrix[i],m)){
-                happyCnt++;
-            }
-            int tmp = 0;
-            for (int j=0; j<n-1; j++){
-                if(matrix[j][i] == matrix[j+1][i]){
-                    tmp++;
-                }
-            }
-            if (tmp >= m){
+        if (m == 1){
+            happyCnt = n*n;
+        }else{
+            for(int i = 0; i<n; i++){
+                if(isHappy(matrix[i],m)){
                     happyCnt++;
-                    break;
                 }
+                int tmp = 0;
+                for (int j=0; j<n-1; j++){
+                    if(matrix[j][i] == matrix[j+1][i]){
+                        tmp++;
+                    }
+                }
+                if (tmp >= m){
+                        happyCnt++;
+                        break;
+                    }
+            }
         }
         System.out.println(happyCnt);
 
